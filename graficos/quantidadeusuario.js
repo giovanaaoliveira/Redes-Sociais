@@ -11,6 +11,7 @@ async function quantidadeUsuariosPorRede() {
             y: quantidadeDeUsuarios
             type: 'bar'
         }
+        
     ]
 
     const grafico = document.createElement('div')
