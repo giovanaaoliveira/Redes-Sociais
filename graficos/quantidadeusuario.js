@@ -1,3 +1,5 @@
+import { getCSS } from "./common"
+
 async function quantidadeUsuariosPorRede() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
     const res= await fetch(url)
@@ -9,7 +11,11 @@ async function quantidadeUsuariosPorRede() {
         {
             x: nomeDasRedes,
             y:quantidadeDeUsuarios,
-            type: 'bar'
+            type: 'bar' ,
+            marker: {
+                color: getCSS('--primary-color')
+
+            }
 
         }
     ]
@@ -18,7 +24,7 @@ async function quantidadeUsuariosPorRede() {
     const grafico = document.createElement('div')
     grafico.className ='grafico'
     document.getElementById('grafico-container').appendChild(grafico)
-    Plotly.newplot(grafico, data)
+    Plotly.newplot(grafico, data, layout)
 
 }
 
