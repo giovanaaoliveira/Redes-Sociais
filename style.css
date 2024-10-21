@@ -49,7 +49,9 @@ nav a:hover{
 .graficos-container_texto {
     margin: 5rem;
 }
-
+.grafico{
+    margin-top: 3rem ;
+}
 .graficos-container_texto {
     font-size: 1.3rem;
     text-align: center;
